@@ -1,10 +1,9 @@
 // App component - represents the whole app
-App = React.createClass({
+Components.App = React.createClass({
     mixins: [ReactMeteorData],
-
-    getMeteorData(){
+    getMeteorData: function(){
         return {
-            tasks: Todos.find({}, {sort: {createdAt: -1}}).fetch()
+            tasks:DBUtility.Todos.getTodoLists(Session.get("filter"))
         }
     },
 
@@ -14,11 +13,11 @@ App = React.createClass({
                 <section id="todoapp">
                     <header id="header">
                         <h1>todos</h1>
-                        <AddTask />
+                        <Components.AddTask />
                     </header>
-                    <TaskList tasks={this.data.tasks}/>
+                    <Components.TaskList tasks={this.data.tasks}/>
                 </section>
-                <Footer />
+                <Components.Footer />
             </div>
         );
     }

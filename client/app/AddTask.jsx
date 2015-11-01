@@ -1,4 +1,4 @@
-AddTask = React.createClass({
+Components.AddTask = React.createClass({
     addToDoItem: function () {
 
         var ENTER_KEY = 13;

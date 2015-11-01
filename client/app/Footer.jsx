@@ -1,4 +1,4 @@
-Footer = React.createClass({
+Components.Footer = React.createClass({
     render(){
         return(
             <footer id="info">
