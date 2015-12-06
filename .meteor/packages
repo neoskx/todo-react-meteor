@@ -11,6 +11,3 @@ react
 standard-app-packages
 kadira:flow-router
 aldeed:collection2
-accounts-password
-kadira:react-layout
-twbs:bootstrap

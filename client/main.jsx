@@ -13,20 +13,7 @@ var filter_selection = {
     completed: {completed: true}
 };
 
-Components.MainLayout = React.createClass({
-    render(){
-        return (
-            <div>
-                {this.props.content}
-            </div>
-        );
-    }
-});
-
-
 Meteor.startup(function () {
     // Use Meteor.startup to render the component after the page is ready
-    //React.render(<Components.App></Components.App>, document.getElementById("render-target"));
-    //React.render(<Components.MainLayout></Components.MainLayout>, document.getElementById("render-target"));
-    //authenticationPage();
+    React.render(<Components.App></Components.App>, document.getElementById("render-target"));
 });
